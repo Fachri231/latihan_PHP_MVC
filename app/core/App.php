@@ -1,4 +1,6 @@
 <?php
+namespace App\Core;
+
 class App
 {
     protected $controller = 'Home';
@@ -11,15 +13,16 @@ class App
 
         // controller
         if (!empty($url)) {
-            if (file_exists('../app/controllers/' . $url[0] . '.php')) {
-                $this->controller = $url[0];
+            $controllerName = ucfirst($url[0]);
+            $controllerClass = '\\App\\Controllers\\' . $controllerName;
+            if (class_exists($controllerClass)) {
+                $this->controller = $controllerName;
                 unset($url[0]);
             }
         }
 
-
-        require_once '../app/controllers/' . $this->controller . '.php';
-        $this->controller = new $this->controller;
+        $controllerClass = '\\App\\Controllers\\' . $this->controller;
+        $this->controller = new $controllerClass;
 
         if (isset($url[1])) {
             if (method_exists($this->controller, $url[1])) {

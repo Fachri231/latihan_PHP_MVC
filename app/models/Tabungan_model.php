@@ -1,4 +1,9 @@
 <?php
+namespace App\Models;
+
+use App\Core\Database;
+use Exception;
+
 class Tabungan_model
 {
     private $tabel = 'tabunganku';

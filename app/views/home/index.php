@@ -12,7 +12,7 @@
         <!-- Flash Message -->
         <div class="row justify-content-center">
             <div class="col-lg-5">
-                <?php Flasher::flash(); ?>
+                <?php use App\Core\Flasher; Flasher::flash(); ?>
             </div>
         </div>
 

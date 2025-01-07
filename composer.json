@@ -1,0 +1,21 @@
+{
+    "name": "fachri/tabunganku",
+    "description": "Aplikasi Tabungan Menggunakan PHP MVC",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Muhammad Fachri",
+            "email": "muhammadfachri231@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "App\\Controllers\\": "app/controllers/",
+            "App\\Models\\": "app/models/",
+            "App\\Core\\": "app/core/"
+        }
+    },
+    "require": {},
+    "require-dev": {}
+}

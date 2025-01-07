@@ -1,4 +1,10 @@
 <?php
+namespace App\Controllers;
+
+use App\Core\Controller;
+use App\Core\Flasher;
+
+
 if (session_status() == PHP_SESSION_NONE) session_start();
 class Tercapai extends Controller
 {
